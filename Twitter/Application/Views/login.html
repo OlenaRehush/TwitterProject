@@ -1,0 +1,15 @@
+﻿<div >
+    <div class="container" style="background-color:white; border-radius:6px; margin-top:200px;">
+        <div class="loginform" style="text-align:center; margin-bottom:30px;">
+            <div class="row">
+                <input type="email" style="width:300px; height:50px; margin-top:30px;" name="Email" ng-maxlength="80" placeholder="Адреса електронної пошти" ng-model="loginData.userName" required />
+            </div>
+            <div class="row">
+                <input type="password" style="width:300px; height:50px; margin-top:30px;" name="Password" ng-minlength="6" ng-maxlength="16" placeholder="Пароль" ng-model="loginData.password" required />
+            </div>
+            <div class="row">
+                <input type="submit" style="width:300px; height:50px; margin-top:30px;" name="Submit" value="Увійти" ng-click="login()" />
+            </div>
+        </div>
+    </div>
+</div>

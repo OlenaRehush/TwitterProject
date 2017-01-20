@@ -1,0 +1,45 @@
+﻿<link href="Application/Styles/home.css" rel="stylesheet" />
+<div class="container">
+    <div class="row">
+        <div class="col-xs-8">
+            <div class="main-tweets">
+                <h3>{{nonAuthMessage}}</h3>
+                <div class="tweet-list" id="tweet-list">
+                    <div class="tweet-info">
+                        <div class="row">
+                            <h3>{{ifSubscrEmpty}}</h3>
+                        </div>
+                        <div class="row">
+                            <h3>{{ifSumMessageEmpty}}</h3>
+                        </div>
+                        <div class="row" ng-repeat="tweet in tweetList|orderBy:'-dataCreated'">
+                            <div class="row" style="margin-left:25px;"><a href="user/{{tweet.userId}}"><h4>{{tweet.userName}}</h4></a></div>
+                            <div class="row" style="margin-left:25px;"><p>{{tweet.tweetText}}</p></div>
+                            <div class="row" style="margin-left:25px;"><h6 style="color:gray">{{tweet.dataCreated|date:"MMM d, y h:mm:ss a"}}</h6></div>
+                            <hr style="margin-left:20px;margin-right:20px; color:#827717" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="row">
+                <div class="all-user-list">
+                    <div class="rearch-user">
+                        <div class="row">
+                            <input type="text" id="userSearch" class="search text-info form-control" style="width:80%; margin-top:10px; margin-left:10%;" data-ng-model="table" placeholder="Enter keywords...">
+                        </div>
+                    </div>
+                    <div class="info-user">
+                        <div class="row" ng-repeat="user in users|filter:table">
+                            <div class="row" style="margin-left:25px;"><a href="user/{{user.id}}"><h4>{{user.fullName}}</h4></a></div>
+                            <div class="row" style="margin-left:25px;"><p>{{user.description}}</p></div>
+                            <div class="row" style="margin-left:25px;"><h6 style="color:gray;">{{user.userName}}</h6></div>
+                            <hr style="margin-left:20px;margin-right:20px; color:#827717" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

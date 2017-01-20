@@ -1,0 +1,66 @@
+﻿<link href="Application/Styles/profile.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="row user-info">
+        <div class="user-info-margin">
+            <div class="col-xs-4">
+                <div class="user-photo">
+                    <img style="text-align:center;" src="{{user.photoURL}}"width="100" />
+                </div>
+                <button style="margin:10px;" type="button" class="btn btn-success" ng-if="!isSubsc" ng-click="Subscribe()">Підписатись</button>
+                <button style="margin:10px;" type="button" class="btn btn-success" ng-if="isSubsc" ng-click="UnSubscribe()">Відписатись</button>
+            </div>
+            <div class="col-xs-5">
+                <div class="row">
+                    <h3>{{user.fullName}}</h3>
+                </div>
+                <div class="row">
+                    <p>
+                        {{user.description}}
+                    </p>
+                </div>
+                <!--<div class="row">
+                    <h4>{{user.hometown}}</h4>
+                </div>-->
+            </div>
+            <div class="col-xs-3">
+                <div>
+                    <h5>{{user.countOfFollowers}} followers</h5>
+                    <hr style="color:#827717" />
+                    <h5>{{user.countOfMessages}} tweets</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="user-following">
+                <br />
+                <h4 style="margin-left:10px;">Followers</h4>
+                <div class="user-following-list">
+                    <div class="row" ng-repeat="follower in user.followers">
+                        <div class="col-xs-4">
+                            <img src="{{follower.photoURL}}" height="70" />
+                        </div>
+                        <div class="col-xs-8">
+                            <h5>{{follower.fullName}}</h5>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-8">
+            <div class="row">
+                <div class="user-tweets">
+                    <div class="row tweet" ng-repeat="tweet in list|orderBy:'-dataCreated'">
+                        <div class="row" style="margin-left:25px;"><a href="user/{{tweet.userId}}"><h4>{{tweet.userName}}</h4></a></div>
+                        <div class="row" style="margin-left:25px;"><p>{{tweet.tweetText}}</p></div>
+                        <div class="row" style="margin-left:25px;"><h6 style="color:gray">{{tweet.dataCreated|date:"MMM d, y h:mm:ss a"}}</h6></div>
+                        <hr style="margin-left:20px;margin-right:20px; color:#827717" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

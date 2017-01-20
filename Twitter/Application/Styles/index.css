@@ -1,0 +1,35 @@
+﻿.tw-header{
+    background:linear-gradient(to top,#dce775,#e6ee9c);
+    border-bottom-color:#827717;
+    border-bottom-style:solid;
+    border-bottom-width:1px;
+    height:100px;
+    font-size:20px;
+    color:black;
+}
+
+.center-head{
+    position: relative;
+}
+
+.right-nav:hover{
+    background-color:transparent;
+}
+
+.navigation{
+    position:absolute;
+   margin-top: 25px;
+}
+
+a {
+    color: inherit;
+}
+
+ul.nav li.menu-text a:hover {
+  background-color: transparent !important;
+}
+
+.link:hover {
+    color:#827717;
+    background-color: transparent !important;
+}

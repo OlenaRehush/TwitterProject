@@ -1,0 +1,43 @@
+﻿.user-info{
+    margin-top:30px;
+    background-color:white;
+    border-radius:6px;
+}
+
+.user-following{
+    margin-top:20px;
+    background-color:white;
+    border-radius:6px;
+}
+
+.tweet{
+    margin-left:20px;
+    margin-top:20px;
+}
+
+.user-following-list{
+    margin-top:20px;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.new-user-tweet{
+    margin-top:20px;
+    background-color:white;
+    border-radius:6px;
+}
+
+.add-user-tweet{
+    margin:20px;
+}
+
+.user-tweets{
+    margin-top:20px;
+    margin-bottom:40px;
+    background-color:white;
+    border-radius:6px;
+}
+
+.user-info-margin{
+    margin:20px;
+}

@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter</title>
+	<meta charset="utf-8" />
+    <base href="/" />
+    <script type="text/html" href="path/to/font-awesome/css/font-awesome.min.css"></script>
+
+</head>
+<body ng-app="twitter_main" style="background-color:#f0f4c3;">
+    <div ng-controller="indexController" ng-init="check()">
+        <div class="tw-header">
+            <div class="navbar navbar-fixed-top center-head">
+                <div class="row">
+                    <div class="col-md-12 navigation">
+                        <ul class="nav navbar-nav pull-left">
+                            <li class="link"><a class="link" href="home">
+                                Головна
+    <!--<i class="fa fa-twitter" aria-hidden="true"></i>-->
+                            </a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav right-nav pull-right">
+                            <!--<li class="link"><a class="link" href="profile">Профіль</a></li>-->
+                            <li class="link"><a class="link" href="register">Зареєструватись</a></li>
+                            <li class="link"  ng-show="!authentication.isAuth"><a class="link" href="login">Увійти</a></li>
+                            <li ng-show="authentication.isAuth" class="dropdown">
+                                <a class="dropdown-toggle noselect link" data-toggle="dropdown">{{authentication.userName}}<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="link" href="profile">Профіль</a></li>
+                                    <li><a ng-click="logOut()">Вийти</a></li>
+                                </ul>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <div ng-view ></div>
+        <div class="tw-footer">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+
+    <!--<script src="Scripts/bootstrap.min.js"></script>-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="Application/Styles/index.css" rel="stylesheet" />
+    <!-- Додаткові теми -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- Свіжа збірка мінімізованої JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/angular-table.min.js"></script>
+    <script src="Scripts/angular-tabs.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-local-storage.min.js"></script>
+    <script src="Application/routes.js"></script>
+
+    <script src="Application/Services/InterceptorService.js"></script>
+    <script src="Application/Services/AuthService.js"></script>
+
+    <script src="Scripts/angular-table.min.js"></script>
+    <script src="Scripts/angular-tabs.min.js"></script>
+    <script src="Scripts/moment.js"></script>
+    <script src="Scripts/bootstrap-datetimepicker.js"></script>
+    <script src="Scripts/moment-with-locales.js"></script>
+
+    <script src="Application/Controllers/loginController.js"></script>
+    <script src="Application/Controllers/signupController.js"></script>
+    <script src="Application/Controllers/profileController.js"></script>
+    <script src="Application/Controllers/indexController.js"></script>
+    <script src="Application/Controllers/homeController.js"></script>
+    <script src="Application/Controllers/userPageController.js"></script>
+
+    <!--<script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>-->
+
+    <link href="Application/Styles/index.css" rel="stylesheet" />
+    <link href="Application/Styles/home.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</body>
+</html>

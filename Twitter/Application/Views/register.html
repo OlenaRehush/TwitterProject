@@ -1,0 +1,26 @@
+﻿<div class="container" style="background-color:white; border-radius:6px; margin-top:200px;">
+    <div style="text-align:center; margin-bottom:30px;">
+        <div class="row">
+            <input type="email" style="width:300px; height:50px; margin-top:30px;" name="Email" ng-maxlength="80" placeholder="abc@example.com" ng-model="registration.Email" required />
+            <div ng-show="registrForm.Email.$error.required && NoValid" class="errortext">Будь ласка, заповніть це поле</div>
+            <div ng-show="registrForm.Email.$error.email && NoValid" class="errortext">Будь ласка, введіть правильний адрес електронної пошти</div>
+            <div ng-show="registrForm.Email.$error.maxlength && NoValid" class="errortext margin1">Максимальна кількість символів 80</div>
+        </div>
+        <div class="row">
+            <input type="password" style="width:300px; height:50px; margin-top:30px;" name="Password" ng-minlength="6" ng-maxlength="16" placeholder="Створіть пароль" ng-model="registration.Password" min="6" required />
+            <div ng-show="registrForm.Password.$error.required  && NoValid" class="errortext">Будь ласка, заповніть це поле</div>
+            <div ng-show="registrForm.$error.minlength  && NoValid" class="errortext">Пароль занадто короткий</div>
+            <div ng-show="registrForm.Password.$error.maxlength && NoValid" class="errortext margin1">Максимальна кількість символів 16</div>
+        </div>
+        <div class="row">
+            <input type="password" style="width:300px; height:50px; margin-top:30px;" name="ConfirmPassword" ng-minlength="6" ng-maxlength="16" placeholder="Підтвердіть пароль" ng-model="registration.ConfirmPassword" min="6" required />
+            <div ng-show="registrForm.Password.$error.required  && NoValid" class="errortext">Будь ласка, заповніть це поле</div>
+            <div ng-show="registrForm.$error.minlength  && NoValid" class="errortext">Пароль занадто короткий</div>
+            <div ng-show="registrForm.Password.$viewValue != registrForm.ConfirmPassword.$viewValue && NoValid" class="errortext">Паролі не співпадають</div>
+            <div ng-show="registrForm.ConfirmPassword.$error.maxlength && NoValid" class="errortext margin1">Максимальна кількість символів 16</div>
+        </div>
+        <div class="row" ng-click="NoValid = true">
+            <input style="width:300px; height:50px; margin-top:30px;" type="submit" name="Submit" id="Submit" value="Зареєструватись" ng-click="signUp()" ng-disabled="inProgress" />
+        </div>
+    </div>
+</div>

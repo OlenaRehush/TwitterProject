@@ -1,0 +1,20 @@
+﻿.main-tweets{
+    margin-top:30px;
+    background-color:white;
+    border-radius:6px;
+}
+
+.tweet-list{
+    margin:10px;
+}
+
+.tweet-info{
+    margin:5px;
+}
+
+.all-user-list{
+    margin-top:30px;
+    background-color:white;
+    border-radius:6px;
+    margin-left:40px;
+}
